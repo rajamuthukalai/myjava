@@ -1,0 +1,20 @@
+A graph is a non-linear data structure consisting of vertices and edges.
+
+Vertices are the nodes of the graph.
+Edges are the arcs that connect pairs of vertices.
+Unweighted graph is a graph not having a weight associated with any edge.
+Weighted graph is a graph having a weight associated with each edge.
+Undirected graph is a graph where edges do not have a direction associated with them.
+Directed graph is a graph where edges have a direction associated with them.
+Cyclic graph is a graph having at least one loop.
+Acyclic graph is a graph having no loop.
+Tree is a special case of Directed Acyclic Graph (DAG).
+
+Types of graphs:
+
+Unweighted and undirected
+Unweighted and directed
+Positive weighted undirected
+Negative weighted undirected
+Positive weighted directed
+Negative weighted directed

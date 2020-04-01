@@ -8,21 +8,6 @@ public class MySinglyLinkedList {
 
   public MySinglyLinkedList() {}
 
-  public static void main(String[] args) {
-    MySinglyLinkedList linkedList = new MySinglyLinkedList();
-    linkedList.add(1);
-    linkedList.add(2);
-    linkedList.addFirst(3);
-    linkedList.add(4);
-    linkedList.addAfter(4, 6);
-    linkedList.add(5);
-    linkedList.add(7);
-    linkedList.add(8);
-    linkedList.add(9);
-    linkedList.addBefore(9, 10);
-    linkedList.print();
-  }
-
   public void add(int value) {
     if (head == null) {
       addFirst(value);
@@ -73,7 +58,6 @@ public class MySinglyLinkedList {
     Node prev = head;
     while (temp.next != null && !(temp.value == beforeValue)) {
       prev = temp;
-      System.out.println(prev.value);
       temp = temp.next;
     }
     if (temp == null) {
@@ -90,6 +74,22 @@ public class MySinglyLinkedList {
       System.out.println(temp.value);
       temp = temp.next;
     }
+  }
+
+  public boolean containsLoop() {
+    Node slow, fast;
+    slow = fast = head;
+    while (fast != null) {
+      fast = fast.next;
+      if (fast != null && fast.next != null) {
+        slow = slow.next;
+        fast = fast.next;
+      }
+    }
+    if (slow == fast) {
+      return true;
+    }
+    return false;
   }
 
   public void printMiddleElement() {

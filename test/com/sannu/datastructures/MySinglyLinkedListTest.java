@@ -64,4 +64,27 @@ class MySinglyLinkedListTest {
     linkedList.print();
     linkedList.reverse().print();
   }
+
+  @Test
+  public void containsLoop() {
+    MySinglyLinkedList linkedList = new MySinglyLinkedList();
+    linkedList.add(1);
+    linkedList.add(2);
+    linkedList.add(3);
+    linkedList.add(4);
+    linkedList.add(5);
+    linkedList.print();
+    System.out.println(linkedList.containsLoop());
+  }
+
+  @Test
+  public void testAddBefore() {
+    MySinglyLinkedList linkedList = new MySinglyLinkedList();
+    linkedList.add(1);
+    linkedList.add(2);
+    linkedList.add(3);
+    linkedList.addBefore(3, 4);
+    linkedList.add(5);
+    linkedList.print();
+  }
 }

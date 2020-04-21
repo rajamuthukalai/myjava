@@ -10,7 +10,7 @@ class Node {
   }
 }
 
-public class BST {
+public class BinaryTree {
   private int count;
   private Node root;
 
@@ -21,10 +21,10 @@ public class BST {
       count++;
       return;
     }
-    insertNode(root, newNode);
+    insertNode(newNode, root);
   }
 
-  void insertNode(Node root, Node newNode) {
+  void insertNode(Node newNode, Node root) {
     if (newNode.data < root.data) {
       if (root.leftChild == null) {
         root.leftChild = newNode;
